@@ -1,0 +1,25 @@
+﻿# Credenciais — NUNCA commitar
+config/.env
+*.env
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Logs — so o status.json e commitado, nao os logs completos
+logs/*.log
+logs/*.log.*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

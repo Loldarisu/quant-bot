@@ -1,0 +1,59 @@
+exchange:
+  id: okx                    # okx | bybit | binance
+  paper_trading: true        # ALWAYS start with true, switch to false only after paper validation
+
+capital:
+  initial: 1000              # USD
+  max_risk_per_trade: 0.02   # 2% per trade
+  max_position_pct: 0.10     # 10% per position
+  target_vol: 0.15           # annualised portfolio volatility target
+  max_leverage: 3.0
+
+risk:
+  max_daily_loss_pct: 0.05   # 5% → halt bot
+  max_total_drawdown_pct: 0.20
+  max_open_positions: 5
+  max_trades_per_day: 20
+
+strategies:
+  funding_arb:
+    enabled: true
+    symbols:
+      # Crypto
+      - BTC/USDT:USDT
+      - ETH/USDT:USDT
+      - SOL/USDT:USDT
+      - BNB/USDT:USDT
+      - WLD/USDT:USDT
+      - INJ/USDT:USDT
+      - TAO/USDT:USDT
+      - TRUMP/USDT:USDT
+      # Stocks tokenizados (alta funding nos últimos 7 dias)
+      - MU/USDT:USDT
+      - SNDK/USDT:USDT
+      - INTC/USDT:USDT
+      # Commodities
+      - XPD/USDT:USDT
+      - CL/USDT:USDT
+    min_funding_rate: 0.0005  # 0.05% per 8h → ~55% APY (acima do break-even com margem)
+    exit_funding_rate: 0.0002  # sai quando cai abaixo de 0.02%
+    scan_interval_seconds: 60
+
+  mean_reversion:
+    enabled: false
+    pairs:
+      - [BTC/USDT:USDT, ETH/USDT:USDT]
+    zscore_entry: 2.0
+    zscore_exit: 0.5
+    window: 60
+
+signals:
+  regime_detector:
+    hurst_window: 100
+    adx_period: 14
+    vol_threshold: 2.0
+
+monitoring:
+  log_level: INFO
+  log_file: logs/bot.log
+  daily_summary_hour: 23    # UTC hour to send daily summary
