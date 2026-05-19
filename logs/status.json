@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-19T16:20:47.649890+00:00",
+  "updated_at": "2026-05-19T17:01:35.415025+00:00",
   "capital": 108,
   "daily_pnl": 0.0,
   "total_pnl": 0.0,
@@ -10,19 +10,9 @@
   "positions": {},
   "market_rates": {
     "XPD/USDT:USDT": {
-      "rate": 0.001185,
-      "apy": 129.8,
+      "rate": 0.001349,
+      "apy": 147.7,
       "direction": "SHORT_PERP"
-    },
-    "MU/USDT:USDT": {
-      "rate": 0.000537,
-      "apy": 58.8,
-      "direction": "SHORT_PERP"
-    },
-    "WLD/USDT:USDT": {
-      "rate": -0.000517,
-      "apy": -56.6,
-      "direction": "LONG_PERP"
     }
   }
 }
