@@ -1,17 +1,28 @@
 {
-  "updated_at": "2026-05-18T22:59:54.548624+00:00",
-  "capital": 1000,
+  "updated_at": "2026-05-19T16:20:47.649890+00:00",
+  "capital": 108,
   "daily_pnl": 0.0,
   "total_pnl": 0.0,
   "max_drawdown_pct": 0.0,
-  "open_positions": 1,
-  "daily_trades": 1,
+  "open_positions": 0,
+  "daily_trades": 0,
   "bot_halted": false,
-  "positions": {
+  "positions": {},
+  "market_rates": {
+    "XPD/USDT:USDT": {
+      "rate": 0.001185,
+      "apy": 129.8,
+      "direction": "SHORT_PERP"
+    },
     "MU/USDT:USDT": {
-      "action": "short_perp_long_spot",
-      "size_usd": 85.8,
-      "entry_price": 680.32
+      "rate": 0.000537,
+      "apy": 58.8,
+      "direction": "SHORT_PERP"
+    },
+    "WLD/USDT:USDT": {
+      "rate": -0.000517,
+      "apy": -56.6,
+      "direction": "LONG_PERP"
     }
   }
 }
